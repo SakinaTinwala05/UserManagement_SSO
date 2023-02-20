@@ -1,0 +1,1203 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='EEEE, MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Ontop automation execution report</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>web-Test-Automaton-ExecutionReport_2022_09_29_00_24_34.html</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Thursday, September 29, 2022, 12:24 AM (IST)</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>4</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='2.963%'><span class='strong'>4</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='8.889%'>12</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='88.148%'>119</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>addRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:24 AM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:24 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:25 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 2s+655ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:24:55 AM</td>
+					<td class='step-details'>Enter harmeet in "User Name" textbox</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:24:56 AM</td>
+					<td class='step-details'>Enter Admin@12345 in "Password" textbox</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:24:56 AM</td>
+					<td class='step-details'>Click on "Login" button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:08 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:12 AM</td>
+					<td class='step-details'>Clicked on + icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:13 AM</td>
+					<td class='step-details'>Entered autorole1 in Role Name textbox</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:14 AM</td>
+					<td class='step-details'>Entered auto_role1 in Name box</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:14 AM</td>
+					<td class='step-details'>Clicked on Enable Radio button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:15 AM</td>
+					<td class='step-details'>Clicked on Event Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:15 AM</td>
+					<td class='step-details'>Verified Delete MY Event in FM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:16 AM</td>
+					<td class='step-details'>Verified View FM in My Event</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:17 AM</td>
+					<td class='step-details'>Clicked on Tab RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:18 AM</td>
+					<td class='step-details'>Clicked on Audit Status + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:19 AM</td>
+					<td class='step-details'>Verified Edit Audit Status</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:19 AM</td>
+					<td class='step-details'>Verified view RA Audit Status</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:19 AM</td>
+					<td class='step-details'>Clicked on Tab UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:20 AM</td>
+					<td class='step-details'>Clicked on User Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:20 AM</td>
+					<td class='step-details'>Clicked on Delete Role checkbox</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:21 AM</td>
+					<td class='step-details'>Verified view UM Role</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:22 AM</td>
+					<td class='step-details'>Clicked on Sve button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:25 AM</td>
+					<td class='step-details'>Clicked on Back Button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:26 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:27 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:27 AM</td>
+					<td class='step-details'>Searched for autorole1</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:28 AM</td>
+					<td class='step-details'>Getting Role Details from list; NameVerification = autorole1 and status = Enabled</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:30 AM</td>
+					<td class='step-details'>Clicked on Role name from the list</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:32 AM</td>
+					<td class='step-details'>Clicked on Event Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:32 AM</td>
+					<td class='step-details'>Verified Delete My Event in FM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:34 AM</td>
+					<td class='step-details'>Clicked on Tab RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:34 AM</td>
+					<td class='step-details'>Clicked on Audit Status + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:35 AM</td>
+					<td class='step-details'>Verified Edit My Event in FM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:36 AM</td>
+					<td class='step-details'>Clicked on Tab UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:37 AM</td>
+					<td class='step-details'>Clicked on User Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:37 AM</td>
+					<td class='step-details'>Verified Delete Role in UM</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:25:37 AM</td>
+					<td class='step-details'>addRole Test Case is Passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>editRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:25 AM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:25 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+788ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:51 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:52 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:54 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:54 AM</td>
+					<td class='step-details'>Searched for autorole1</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:57 AM</td>
+					<td class='step-details'>Clicked on Role name from the list</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:58 AM</td>
+					<td class='step-details'>Updated tole name to updatedrole1</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:58 AM</td>
+					<td class='step-details'>Clicked on Tab RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:59 AM</td>
+					<td class='step-details'>Clicked on Data Analysis + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:00 AM</td>
+					<td class='step-details'>Verified Add BAC</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:00 AM</td>
+					<td class='step-details'>Verified View BAC in RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:01 AM</td>
+					<td class='step-details'>Clicked on Sve button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:02 AM</td>
+					<td class='step-details'>Clicked on Sve button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:06 AM</td>
+					<td class='step-details'>Clicked on Back Button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:08 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:10 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:10 AM</td>
+					<td class='step-details'>Searched for updatedrole1</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:11 AM</td>
+					<td class='step-details'>Getting Role Details from list; NameVerification = updatedrole1 and status = Enabled</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:13 AM</td>
+					<td class='step-details'>Clicked on Role name from the list</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:13 AM</td>
+					<td class='step-details'>Clicked on Tab RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:14 AM</td>
+					<td class='step-details'>Clicked on Data Analysis + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:15 AM</td>
+					<td class='step-details'>Verified Add BAC in RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:15 AM</td>
+					<td class='step-details'>Verified Edited Role Successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:26:15 AM</td>
+					<td class='step-details'>editRole Test Case is Passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>deleteRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+686ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:28 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:29 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:30 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:30 AM</td>
+					<td class='step-details'>Searched for updatedrole1</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:32 AM</td>
+					<td class='step-details'>Clicked on Delete button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:32 AM</td>
+					<td class='step-details'>Clicked on Yes button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:33 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:26:39 AM</td>
+					<td class='step-details'>deleteRole Test Case is Failed</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:26:39 AM</td>
+					<td class='step-details'>Screenshot<img data-featherlight='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\deleteRole_00_26_39.png' width='10%' src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\deleteRole_00_26_39.png' data-src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\deleteRole_00_26_39.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:26:39 AM</td>
+					<td class='step-details'>Stacktrace: 
+
+java.lang.RuntimeException: SendKeys with clear on Element is failed: State = isDisplayed Passed: :  by : [[ChromeDriver: chrome on WINDOWS (0abe944a37d49cb139a35ee33eab9725)] -> xpath: //*[@id ='txtRoleName']]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>bulkDeleteRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+709ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:42 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:42 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:43 AM</td>
+					<td class='step-details'>Selected begins with in Search with name</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:44 AM</td>
+					<td class='step-details'>Entered auto in Search Text box</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:44 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:45 AM</td>
+					<td class='step-details'>Sorted Created on in Ascending</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:46 AM</td>
+					<td class='step-details'>Sorted Created on in Descending</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:47 AM</td>
+					<td class='step-details'>Selected first Department</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:26:58 AM</td>
+					<td class='step-details'>bulkDeleteRole Test Case is Failed</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:26:58 AM</td>
+					<td class='step-details'>Screenshot<img data-featherlight='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\bulkDeleteRole_00_26_57.png' width='10%' src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\bulkDeleteRole_00_26_57.png' data-src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\bulkDeleteRole_00_26_57.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:26:58 AM</td>
+					<td class='step-details'>Stacktrace: 
+
+java.lang.RuntimeException: Click on Element is failed: State = isDisplayed failed: :  by : null</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyCopyFromRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:26 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:27 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+175ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:11 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:13 AM</td>
+					<td class='step-details'>Clicked on + icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:14 AM</td>
+					<td class='step-details'>Checked the Copy from role checkbox</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:15 AM</td>
+					<td class='step-details'>Selected Role to Copy</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:16 AM</td>
+					<td class='step-details'>Clicked on Event Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:17 AM</td>
+					<td class='step-details'>Verified Delete My Event in FM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:18 AM</td>
+					<td class='step-details'>Clicked on Tab RA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:19 AM</td>
+					<td class='step-details'>Clicked on Audit Status + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:19 AM</td>
+					<td class='step-details'>Verified Edit My Event in FM</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:20 AM</td>
+					<td class='step-details'>verifyCopyFromRole Test Case is Passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>allowAndDenyAll</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:27 AM (IST)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:27 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:27 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+59ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:33 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:38 AM</td>
+					<td class='step-details'>Clicked on + icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:39 AM</td>
+					<td class='step-details'>Clicked on Tab UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:39 AM</td>
+					<td class='step-details'>Clicked on User Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:40 AM</td>
+					<td class='step-details'>Clicked on Allow All User Configuration Check box</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:40 AM</td>
+					<td class='step-details'>Verified View User Config in UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:40 AM</td>
+					<td class='step-details'>Verified Add User Config in UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:41 AM</td>
+					<td class='step-details'>Verified Edit User Config in UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:41 AM</td>
+					<td class='step-details'>Verified Delete User Config in UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:42 AM</td>
+					<td class='step-details'>Clicked on Allow All User Configuration Check box</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:43 AM</td>
+					<td class='step-details'>Clicked on Allow All User Management</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:44 AM</td>
+					<td class='step-details'>Verified View User Config in UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:44 AM</td>
+					<td class='step-details'>Verified view UM Role</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:44 AM</td>
+					<td class='step-details'>Verified Edit User Config in UM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:46 AM</td>
+					<td class='step-details'>Clicked on Back Button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:46 AM</td>
+					<td class='step-details'>allowAndDenyAll Test Case is Passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyDisabledRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:27 AM (IST)</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:27 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:28 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+778ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:49 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:53 AM</td>
+					<td class='step-details'>Clicked on + icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:54 AM</td>
+					<td class='step-details'>Entered DisabledRole in Role Name textbox</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:55 AM</td>
+					<td class='step-details'>Entered DisabledRole in Name box</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:55 AM</td>
+					<td class='step-details'>Clicked on Disable Radio button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:56 AM</td>
+					<td class='step-details'>Clicked on Event Management + expand button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:57 AM</td>
+					<td class='step-details'>Verified Delete MY Event in FM</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:57 AM</td>
+					<td class='step-details'>Verified View FM in My Event</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:58 AM</td>
+					<td class='step-details'>Clicked on Sve button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:01 AM</td>
+					<td class='step-details'>Clicked on Back Button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:02 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:04 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:04 AM</td>
+					<td class='step-details'>Searched for DisabledRole</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:06 AM</td>
+					<td class='step-details'>Getting Role Details from list; NameVerification = DisabledRole and status = Disabled</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:08 AM</td>
+					<td class='step-details'>Clicked on Role name from the list</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:10 AM</td>
+					<td class='step-details'>Opened Role Page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:11 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:13 AM</td>
+					<td class='step-details'>Clicked on Search button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:13 AM</td>
+					<td class='step-details'>Searched for DisabledRole</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:14 AM</td>
+					<td class='step-details'>Clicked on Delete button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:15 AM</td>
+					<td class='step-details'>Clicked on Yes button</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:15 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:28:16 AM</td>
+					<td class='step-details'>verifyDisabledRole Test Case is Failed</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:28:16 AM</td>
+					<td class='step-details'>Screenshot<img data-featherlight='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\verifyDisabledRole_00_28_16.png' width='10%' src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\verifyDisabledRole_00_28_16.png' data-src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\verifyDisabledRole_00_28_16.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:28:16 AM</td>
+					<td class='step-details'>Stacktrace: 
+
+java.lang.RuntimeException: SendKeys with clear on Element is failed: State = isDisplayed Passed: :  by : [[ChromeDriver: chrome on WINDOWS (0abe944a37d49cb139a35ee33eab9725)] -> xpath: //*[@id ='txtRoleName']]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>searchRole</span>
+						<span class='test-time'>Thursday, September 29, 2022, 12:28 AM (IST)</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Thursday, September 29, 2022, 12:28 AM (IST)</span>
+	<span class='label end-time'>Thursday, September 29, 2022, 12:28 AM (IST)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+438ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:18 AM</td>
+					<td class='step-details'>Clicked on Search Icon</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:19 AM</td>
+					<td class='step-details'>Entered TestNewRole in Name box</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:28:24 AM</td>
+					<td class='step-details'>searchRole Test Case is Failed</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:28:25 AM</td>
+					<td class='step-details'>Screenshot<img data-featherlight='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\searchRole_00_28_24.png' width='10%' src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\searchRole_00_28_24.png' data-src='F:\QA\Vivekbhai\UM\UserManagement_SSO\.\test-output\FailureScreenShots\test.web.Role\29_09_2022\searchRole_00_28_24.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:28:25 AM</td>
+					<td class='step-details'>Stacktrace: 
+
+java.lang.RuntimeException: SendKeys on Element is failed: State = isDisplayed Passed: :  by : [[ChromeDriver: chrome on WINDOWS (0abe944a37d49cb139a35ee33eab9725)] -> xpath: //*[@id = 'drpRoleStatusValue']]</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>8</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>135</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Thursday, September 29, 2022, 12:24 AM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Thursday, September 29, 2022, 12:28 AM (IST)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 3m 51s+815ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Module</td>
+								<td>web</td>
+							</tr>
+							<tr>
+								<td>Execution Platform</td>
+								<td>local</td>
+							</tr>
+							<tr>
+								<td>Environment</td>
+								<td>dev</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 4,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 4,
+				
+				passChild: 4,
+				failChild: 12,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 119,
+				exceptionsChild: 12,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

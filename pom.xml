@@ -1,0 +1,155 @@
+	<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Selenium_Practice</groupId>
+	<artifactId>Selenium_Practice</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<jre.level>16.0.1</jre.level>
+		<jdk.level>16.0.1</jdk.level>
+		<suiteXmlFile>src/test/resources/suites/Login_Web.xml</suiteXmlFile>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>panamax-framework</groupId>
+			<artifactId>panamax-framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/panamax-framework-0.0.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.17.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.4.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.6.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20211205</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.10.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M2</version>
+				<configuration>
+					<systemPropertyVariables>
+						<environment>Dev</environment>
+						<platform>Local</platform> <!-- Local/Browserstack -->
+						<module>Web</module> <!-- Web/Android -->
+					</systemPropertyVariables>
+					<testFailureIgnore>true</testFailureIgnore>
+					<!-- Suite testng xml file to consider for test execution -->
+					<reportsDirectory>./test-output/</reportsDirectory>
+					<suiteXmlFiles>
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
